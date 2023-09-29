@@ -7,3 +7,13 @@ pub fn set_inner(value: usize) {
 pub fn get_inner() -> usize {
     return get();
 }
+
+#[no_mangle]
+pub extern "C" fn set_inner_c2(value: usize) {
+    set(value)
+}
+
+#[no_mangle]
+pub extern "C" fn get_inner_c2() -> usize {
+    return get();
+}
